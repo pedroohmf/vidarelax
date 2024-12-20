@@ -97,17 +97,13 @@ header {
    margin: auto;
 }
 main {
-   background-color: #666ed9;
+   background-color: #272545;
 }
 section  {
-   background: url("../images/wave.svg");
-   background-size: cover;
-   background-repeat: no-repeat;
    height: 80vh;
    display: flex;
    justify-content: center;
    align-items: center;
-
 
    .metodos {
       
@@ -163,4 +159,17 @@ section  {
          }
       }
    }
+}
+
+.section1 {
+   background: url("../images/wave.svg");
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.section2 {
+   background: url("../images/wave2.svg");
+   background-size: cover;
+   background-repeat: no-repeat;
+
 }
