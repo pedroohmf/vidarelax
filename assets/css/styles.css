@@ -172,4 +172,58 @@ section  {
    background-size: cover;
    background-repeat: no-repeat;
 
+
+   .area-depoimentos {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1rem;
+      width: 1200px;
+
+      .slide {
+
+         .area-depoimento {
+            background-color: #fff;
+            width: 18.75rem;
+            padding: 2rem;
+            border-radius: 5px;
+
+           .cabecalho-depoimento {
+            display: flex;
+            flex-direction: row;
+            gap: 1.2rem;
+            padding: 1.5rem 0rem;
+
+               img {
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+               }
+
+               h3 {
+                  color: #625e6d;
+                  font-weight: 600;
+               }
+               span {
+                  color: #7b7c88;
+                  font-weight: 400;
+               }
+           }
+
+           .depoimento {
+            color: #8e9192;
+            font-weight: 300;
+           }
+
+           .estrelas {
+            margin-top: 1rem;
+            text-align: right;
+             img {
+               width: 20px;
+               height: 20px;
+             }
+           }
+         }
+      }
+   }
 }
