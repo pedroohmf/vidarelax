@@ -37,7 +37,7 @@ header {
 
    display: flex;
    flex-direction: column;
-   height: 90vh;
+   height: 100vh;
 
 
    .oferta {
@@ -315,19 +315,19 @@ section  {
          flex-direction: column;
          justify-content: center;
          align-items: center;
+         gap: 3rem;
 
          h2 {
             padding-top: 3rem;
             font-weight: 300;
-            font-size: 3rem;
+            font-size: 4rem;
             line-height: 3rem;
             color: #4c4c4c;
-            margin-bottom: -20px;
          }
 
          .footer-meio-qualidade-sono {
             display: grid;
-            grid-template-columns: 2fr 4fr;
+            grid-template-columns: 5fr 3.3fr;
             justify-items: center;
             justify-content: center;
             align-items: center;
@@ -335,22 +335,30 @@ section  {
             padding: 3rem 0rem;
 
             img {
-               max-width: 16.5rem;
-               max-height: 16.5rem;
+               max-width: 30rem;
+               max-height: 30rem;
+            }
+         }
+         .ultima-img-qualidadeSono {
+            img {
+               max-width: 32rem;
+               max-height: 32rem;
             }
          }
          
       }
       .footer-qualidade-sono {
-         display: flex;
-         justify-content: center;
+         display: grid;
+         grid-template-columns: 3.3fr 5fr;
          align-items: center;
-         flex-direction: row-reverse;
          gap: 2rem;
+         padding: 3rem 0rem;
+         justify-items: center;
+         justify-content: center;
 
          img {
-            max-width: 22rem;
-            max-height: 16.5rem;
+            max-width: 30rem;
+            max-height: 30rem;
          }
       }
    }
