@@ -4,7 +4,7 @@
    --bg-button-cta: #56c225;
    --text-button-cta: #fff;
 
-    --h1-title:#282828; /* #4a525e; */
+    --h1-title:#1a3c75; /* #4a525e; */
    --cards-background: #f5f5f5;
 }
 
@@ -318,7 +318,7 @@ section  {
          gap: 3rem;
 
          h2 {
-            padding-top: 3rem;
+            margin-top: 3rem;
             font-weight: 300;
             font-size: 4rem;
             line-height: 3rem;
@@ -338,8 +338,14 @@ section  {
                max-width: 30rem;
                max-height: 30rem;
             }
+
+            
          }
+
          .ultima-img-qualidadeSono {
+            display: flex;
+            padding: 0;
+
             img {
                max-width: 32rem;
                max-height: 32rem;
@@ -360,6 +366,16 @@ section  {
             max-width: 30rem;
             max-height: 30rem;
          }
+
+         
+
+         .sono-reparador-img {
+            max-width: 38rem;
+            max-height: 38rem;
+         }
+      }
+      .sono-reparador {
+         display: flex;
       }
    }
 }
@@ -367,7 +383,7 @@ section  {
 .section4 {
    span {
       font-size: 1.1rem;
-      padding: 2.5rem 0px 2rem 0px;
+      padding: 1rem 0px 2rem 0px;
       font-family: "Poppins", sans-serif;
       font-weight: 300;
       color: #9c9c9c;
@@ -376,14 +392,14 @@ section  {
    .ciclo-vicioso {
       display: flex;
       flex-direction: column;
-      gap: 10rem;
+      gap: 6rem;
 
       .textos {
          display: flex;
          flex-direction: column;
          justify-content: center;
          align-items: center;
-         gap: 4rem;
+         gap: 3rem;
       }
 
       .basta {
@@ -392,6 +408,77 @@ section  {
           }
       }
    }
+
+   .area-depoimentos {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1rem;
+      width: 1200px;
+
+      h1 {
+         font-weight: 600;
+         font-size: 4rem;
+         color: var(--h1-title);
+         text-align: center;
+         line-height: 4rem;
+      }
+      span {
+         color: #EBEBD3;
+      }
+
+      .slide {
+         display: flex;
+         gap: 3rem;
+         justify-content: center;
+         flex-direction: column;
+
+         .area-depoimento {
+            background-color: var(--cards-background);
+            width: 18.75rem;
+            padding: 2rem;
+            border-radius: 5px;
+
+           .cabecalho-depoimento {
+            display: flex;
+            flex-direction: row;
+            gap: 1.2rem;
+            padding: 1.5rem 0rem;
+
+               img {
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 50%;
+               }
+
+               h3 {
+                  color: #625e6d;
+                  font-weight: 600;
+               }
+               span {
+                  color: #7b7c88;
+                  font-weight: 400;
+               }
+           }
+
+           .depoimento {
+            color: #9c9c9c;
+            font-weight: 300;
+           }
+
+           .estrelas {
+            margin-top: 1rem;
+            text-align: right;
+             img {
+               width: 20px;
+               height: 20px;
+             }
+           }
+         }
+      }
+   }
+
+
 }
 
 
