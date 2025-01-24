@@ -674,7 +674,7 @@ footer {
 
 @media (max-width: 480px) {
    header {
-      & .cta {
+      .cta {
          .header--content {
             display: flex;
             height: 100%;
@@ -683,8 +683,8 @@ footer {
 
             .header--left-content {
                font-size: 1rem;
-               padding: 0rem 1rem;
-               margin-top: -3rem;
+               margin-top: -1rem;
+               
 
                h1 {
                   font-size: 3rem;
@@ -697,14 +697,38 @@ footer {
                }
                p{
                   font-size: .9rem;
+                  padding: 0rem;
                }
                button {
-                  width: 90%;
+                  width: 100%;
                   max-width: 350px;
                }
             }
+
+            .header--right-content {
+               img {
+                   width: 20rem;
+                   height: 20rem;
+               }
+           }
          }
       }
+
+      .oferta {
+         .logo {
+            img {
+               max-width: 90px;
+               max-height: 90px;
+            }
+         }
+   }
+
+   }
+
+   .container {
+      max-width: 350px;
+      margin: auto;
+      --bs-gutter-x: 0rem!important;
    }
 
    .section1 {
@@ -731,10 +755,100 @@ footer {
          }
       }
    }
+   .section2 {
+      padding: 3rem 2rem;
 
-   .container {
-      max-width: 350px;
+      .area-depoimentos {
+         h1 {
+            font-size: 2.6rem;
+            max-width: 21.875rem;
+            font-weight: 900;
+            line-height: 3rem;
+         }
+      }
+  }
+
+   .section3 {
+     padding-top: 6rem;
+
+      .area-qualidade-sono {
+         max-width: 21.875rem;
+
+         .cabecalho-qualidade-sono {
+            gap: 1rem;
+
+            h1 {
+               font-size: 2.6rem;
+               line-height: 3rem;
+               text-align: center;
+            }
+            span {
+               font-size: .9rem;
+            }
+         }
+
+         .meio-qualidade-sono {
+            gap: .5rem;
+
+            h2 {
+               font-size: 2rem;
+               text-align: center;
+               margin-top: 1.5rem;
+            }
+
+            .footer-meio-qualidade-sono {
+               gap: .5rem;
+               padding: 1rem 0rem;
+
+               img {
+                  max-width: 15rem;
+                  max-height: 15rem;
+              }
+            }
+         }
+
+         span {
+            font-size: .9rem;
+            padding: 1.2rem 0px 1rem 0px;
+         }
+
+         .footer-qualidade-sono {
+            display: flex;
+            flex-flow: wrap-reverse;
+            gap: .5rem;
+            padding: 1rem 0rem;
+
+            img {
+               max-width: 15rem;
+               max-height: 15rem;
+           }
+           .sono-reparador-img {
+               max-width: 19rem;
+               max-height: 19rem;
+            }
+         }
+
+         .meio-qualidade-sono {
+            .footer-meio-qualidade-sono {
+               display: flex;
+               flex-direction: column;
+            }
+        }
+      }
+
    }
+
+   .section4 {
+      span {
+         font-size: .9rem;
+      }
+
+      h1 {
+         font-size: 2rem!important;
+         text-align: center;
+      }
+   }
+   
 
    .swiper-android .swiper-slide, .swiper-ios .swiper-slide, .swiper-wrapper {
       padding: 0rem .8rem;
@@ -758,4 +872,8 @@ footer {
       justify-content: center;
       align-items: center;
    }
+
+   .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      width: min-content!important;
+  }
 }
