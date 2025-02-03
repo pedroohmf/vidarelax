@@ -23,7 +23,7 @@ body {
 h1 {
    font-size: 4rem;
    font-weight: 900;
-   line-height: 3rem;
+   line-height: 4rem;
    color: var(--h1-title);
 }
 
@@ -400,6 +400,7 @@ section  {
          flex-direction: column;
          justify-content: center;
          align-items: center;
+         text-align: center;
          gap: 3rem;
       }
 
@@ -482,6 +483,19 @@ section  {
 
 }
 
+.section5 {
+   .bonus {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5rem;
+
+      img {
+         border-radius: 5px;
+         filter: blur(5px);
+      }
+   }
+   
+}
 
 .descricao-ebook {
    display: flex;
@@ -565,6 +579,12 @@ footer {
          gap: 3rem;
          justify-content: space-between;
          padding-bottom: 2rem;
+
+         .network {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+         }
       }
 
       .termos-footer {
@@ -577,109 +597,108 @@ footer {
    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  /* Laptops/Desktops */
 /* @media screen and (min-width: 1024px) {
 
 } */
 
 @media (max-width: 768px) {
-   header {
-      height: 100%;
-      word-wrap: break-word;
-      overflow-x: auto;
+   .container {
+      max-width: 720px;
+      width: 720px;
+   }
 
+   header {
+      .container {
+         max-width: 720px;
+         display: flex;
+         justify-content: center;
+         margin: auto;
+      }
       .cta {
          .header--content {
-            display: grid;
-            grid-template-columns: min-content;
+            display: flex;
+            flex-direction: column-reverse;
             height: 100%;
+            margin-bottom: 3rem;
 
-            .header--left-content {
-
-               h1 {
-                  font-size: 3rem;
-                  line-height: 3rem;
-                  text-align: left;
-               }
-               h2 {
-                  font-size: 1.5rem;
-               }
-            }
             .header--right-content {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+
                img {
-                  width:21.875rem;
-                  height: 21.875rem;
+                  max-width: 35rem;
+                  max-height: 35rem;
                }
             }
          }
       }
-   }
-   .container {
-      max-width: 700px;
-      display: flex;
-      flex-wrap: wrap;
-   }
-   section {
-      height: 100%;
    }
 
    .section1 {
-
       .metodos {
-
          .metodo {
             display: grid;
+            padding: 1rem .03rem;
+            gap: 3rem;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
          }
       }
    }
+
    .section2 {
-
       .area-depoimentos {
-         width: 21.875rem;
+         width: 720px;
+      }
+   }
 
-         h1 {
-            font-size: 3rem;
-            max-width: 21.875rem;
-            font-weight: 900;
-            line-height: 3rem;
-        }
+   .section3 {
+      margin-top: 15rem;
 
-         .slide {
+      .area-qualidade-sono {
 
-            .area-depoimento {
-               width: 16.75rem;
+         .footer-qualidade-sono {
+            display: flex;
+            flex-direction: column-reverse;
+         }
+
+         .meio-qualidade-sono {
+
+            .footer-meio-qualidade-sono {
+               display: flex;
+               flex-direction: column;
             }
+
+            
+
          }
       }
    }
+
 }
 
-@media (max-width: 480px) {
+@media (max-width: 425px) {
+   .container {
+      max-width: 380px;
+      margin: auto;
+      bs-gutter-x: 0rem;
+   }
+
    header {
+      .container {
+         display: flex;
+         margin: auto;
+         justify-content: center;
+      }
       .cta {
          .header--content {
             display: flex;
             height: 100%;
             justify-content: center;
             flex-direction: column-reverse;
+            max-width: 380px;
+            width: 380px;
 
             .header--left-content {
                font-size: 1rem;
@@ -698,14 +717,18 @@ footer {
                p{
                   font-size: .9rem;
                   padding: 0rem;
+                  max-width: 380px;
                }
                button {
                   width: 100%;
-                  max-width: 350px;
+                  max-width: 380px;
                }
             }
 
             .header--right-content {
+               display: flex;
+               justify-content: center;
+
                img {
                    width: 20rem;
                    height: 20rem;
@@ -725,13 +748,11 @@ footer {
 
    }
 
-   .container {
-      max-width: 350px;
-      margin: auto;
-      --bs-gutter-x: 0rem!important;
-   }
-
    .section1 {
+      .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+         /* width: min-content!important; */
+         width: min-content;
+     }
       .metodos {
          gap: 4rem;
 
@@ -739,7 +760,6 @@ footer {
             font-size: 3rem;
             line-height: 3rem;
             text-align: center;
-            margin-top: 8rem;
             font-weight: 900;
          }
 
@@ -748,6 +768,8 @@ footer {
          }
 
          .metodo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             .metodo--content{
                padding: 1rem 1rem;
                height: 16.5rem;
@@ -755,21 +777,27 @@ footer {
          }
       }
    }
+
    .section2 {
       padding: 3rem 2rem;
 
       .area-depoimentos {
+         width: 380px;
          h1 {
-            font-size: 2.6rem;
+            font-size: 2.5rem;
             max-width: 21.875rem;
             font-weight: 900;
             line-height: 3rem;
          }
       }
-  }
+   }
 
    .section3 {
-     padding-top: 6rem;
+      .container {
+         display: flex;
+         justify-content: center;
+      }
+      padding-top: 6rem;
 
       .area-qualidade-sono {
          max-width: 21.875rem;
@@ -841,14 +869,27 @@ footer {
    .section4 {
       span {
          font-size: .9rem;
+         max-width: 350px;
       }
 
       h1 {
-         font-size: 2rem!important;
+         font-size: 2rem;
          text-align: center;
       }
    }
    
+   .section5 {
+      .bonus {
+         h1 {
+            font-size: 2rem;
+            line-height: 2rem;
+         }
+         img {
+            width: 22.2rem;
+            height: 22.2rem;
+         }
+      }
+   }
 
    .swiper-android .swiper-slide, .swiper-ios .swiper-slide, .swiper-wrapper {
       padding: 0rem .8rem;
@@ -859,12 +900,14 @@ footer {
       background-color: rgb(205 205 205 / 0%);
       border-radius: 5px;
       border: 1px solid rgb(255 255 255 / 6%);
-      height: 25.937rem;
+      height: 25.25rem;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 0rem .3rem;
+      margin-top: -60px;
    }
+
    .swiper-slide {
       max-width: 18.75rem!important;
       margin-right: 1rem!important;
@@ -873,7 +916,475 @@ footer {
       align-items: center;
    }
 
-   .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-      width: min-content!important;
-  }
+   footer {
+      color: #9c9c9c;
+
+      .container {
+         max-width: 280px;
+      }
+      .area-footer {
+         max-width: 280px;
+
+         .network {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            h6 {
+               font-size: .7rem;
+               font-weight: 300;
+               color: #9c9c9c;
+            }
+            img {
+               max-width: 30px;
+               max-height: 30px;
+            }
+         }
+
+         .termos-footer {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+
+            .redes-sociais {
+               button {
+                  font-size: .8rem;
+                  color: #9c9c9c!important;
+                  font-weight: 100;
+               }
+            }
+         }
+
+         p {
+            font-size: .8rem;
+            text-align: center;
+         }
+         b {
+            font-size: .8rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 375px) {
+   .container {
+      max-width: 350px;
+   }
+
+   header {
+      width: 375px;
+
+      .container {
+         max-width: 350px;
+         margin: auto;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .cta {
+         .header--content {
+            margin-bottom: 0rem;
+
+            .header--left-content {
+               font-size: .8rem;
+
+
+               h1 {
+                  font-size: 1.3rem;
+                  line-height: 1.4rem;
+                  max-width: 350px;
+                  }
+                  h2 {
+                     font-size: 1rem;
+                     line-height: 1.1rem;
+                     max-width: 350px;
+                 }
+                 p {
+                  max-width: 350px;
+                 }
+                 .button-center {
+                   max-width: 350px;
+                 }
+            }
+            .header--right-content {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               img {
+                  width: 21.875rem;
+                  height: 21.875rem;
+               }
+            }
+            }
+         }
+   }
+
+   .section3 {
+      padding-top: 2rem;
+      margin-top: -5rem;
+
+      .area-qualidade-sono {
+         .cabecalho-qualidade-sono {
+            h1 {
+               font-size: 2rem;
+               line-height: 2rem;
+               text-align: center;
+            }
+            span {
+               font-size: .9rem;
+               padding: 0rem 0rem 2rem 0rem
+           }
+         }
+      }
+   }
+
+   .section4 {
+      h1 {
+         font-size: 2rem;
+         line-height: 2rem;
+         margin-top: 1rem;
+      }
+      .container {
+         justify-content: center;
+      }
+   
+      .ciclo-vicioso {
+         max-width: 350px;
+         gap: 1rem;
+
+         .basta {
+            h1 {
+               font-size: 2rem;
+               line-height: 2rem;
+            }
+         }
+         .textos {
+            gap:.5rem;
+         }
+      }
+   
+      span {
+          font-size: .8rem;
+          max-width: 280px;
+      }
+   }
+
+   .section1 {
+      margin: 0;
+      .metodos {
+         .metodo {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+         }
+         gap: 1.5rem;
+
+         h1 {
+            font-size: 2rem;
+            line-height: 2rem;
+         }
+      }
+      
+   }
+
+   .section5 {
+      .container {
+
+      }
+      .bonus {
+         h1 {
+            font-size: 2rem;
+            line-height: 2rem;
+         }
+         span {
+            font-size: .8rem;
+         }
+         img {
+            width: 20rem;
+            height: 20rem;
+            margin-bottom: 2rem;
+         }
+      }
+   }
+
+   .section2 {
+      .area-depoimentos {
+         max-width: 350px;
+      }
+   }
+
+   footer {
+      color: #9c9c9c;
+
+      .container {
+         max-width: 280px;
+      }
+      .area-footer {
+         max-width: 280px;
+
+         .network {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            h6 {
+               font-size: .7rem;
+               font-weight: 300;
+               color: #9c9c9c;
+            }
+            img {
+               max-width: 32px;
+               max-height: 32px;
+            }
+         }
+
+         .termos-footer {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+
+            .redes-sociais {
+               button {
+                  font-size: .8rem;
+                  color: #9c9c9c!important;
+                  font-weight: 100;
+               }
+            }
+         }
+
+         p {
+            font-size: .8rem;
+            text-align: center;
+         }
+         b {
+            font-size: .8rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 320px) {
+   .container {
+      display: flex;
+      justify-content: start;
+      margin: auto;
+   }
+
+   header {
+      width: 320px;
+      .cta {
+         .header--content {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            flex-direction: column-reverse;
+            max-width: 280px;
+            width: 280px;
+         }
+     }
+   }
+   
+   .cta {
+      header {
+      .header--content {
+         width: 280px;
+         display: none;
+
+         .header--right-content {
+
+            img {
+               width: 17.5rem;
+               height: 17.5rem;
+            }
+         }
+      }
+   }
+   }
+   
+   .section2 {
+      .container {
+         display: flex;
+         justify-content: center;
+      }
+      .area-depoimentos {
+         max-width: 280px;
+         h1 {
+            font-size: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            font-weight: 900;
+         }
+
+         .slide {
+            .area-depoimento {
+               .depoimento {
+                  p{
+                     font-size: .8rem;
+                  }
+               }
+               .cabecalho-depoimento {
+                  h3 {
+                     font-size: 1rem;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .section3 {
+      padding-top: 3rem;
+      margin-top: 0rem;
+
+         .area-qualidade-sono {
+            max-width: 280px;
+            .cabecalho-qualidade-sono {
+               h1 {
+                  font-size: 2rem;
+                  line-height: 2rem;
+                  text-align: center;
+               }
+               span {
+                  font-size: .9rem;
+                  padding: 0rem 0rem 2rem 0rem
+            }
+            }
+      }
+
+   }
+
+   .section4 {
+      h1 {
+         font-size: 2rem;
+         line-height: 2rem;
+         margin-top: 1rem;
+      }
+      .container {
+         justify-content: center;
+      }
+
+      .ciclo-vicioso {
+         max-width: 280px;
+         gap: 1rem;
+         .textos {
+            gap:.5rem;
+         }
+      }
+
+      span {
+         font-size: .8rem;
+         max-width: 280px;
+      }
+   }
+
+   .section1 {
+      margin: 0;
+
+      .container {
+         max-width: 280px;
+      }
+
+      .metodos {
+         gap: 1rem;
+         h1 {
+            font-size: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            font-weight: 900;
+         }
+         .metodo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: .4rem;
+            margin-bottom: 2rem;
+
+            .metodo--content {
+               padding: .5rem .5rem;
+
+               img {
+                  width: 50px;
+                  height: 50px;
+               }
+            }
+         }
+   }
+   }
+
+   .section5 {
+      .container {
+         max-width: 280px;
+      }
+      .bonus {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         h1 {
+            font-size: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            font-weight: 900;
+         }
+         img {
+            max-width: 250px;
+            max-height: 250px;
+            margin-bottom: 2rem;
+         }
+      }
+   }
+
+   footer {
+      color: #9c9c9c;
+
+      .container {
+         max-width: 280px;
+      }
+      .area-footer {
+         max-width: 280px;
+
+         .network {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h6 {
+               font-size: .7rem;
+               font-weight: 300;
+               color: #9c9c9c;
+            }
+            img {
+               max-width: 30px;
+               max-height: 30px;
+            }
+         }
+
+         .termos-footer {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+
+            .redes-sociais {
+               button {
+                  font-size: .8rem;
+                  color: #9c9c9c!important;
+                  font-weight: 100;
+               }
+            }
+         }
+
+         p {
+            font-size: .8rem;
+            text-align: center;
+         }
+         b {
+            font-size: .8rem;
+         }
+      }
+   }
 }
