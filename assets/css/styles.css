@@ -127,9 +127,11 @@ header {
    width: 1200px;
    margin: auto;
 }
+
 main {
    background-color: var(--background);
 }
+
 section  {
    display: flex;
    justify-content: center;
@@ -235,6 +237,7 @@ section  {
          .area-depoimento {
             background-color: var(--cards-background);
             width: 18.75rem;
+            height: 21.875rem;
             padding: 2rem;
             border-radius: 5px;
 
@@ -253,10 +256,12 @@ section  {
                h3 {
                   color: #625e6d;
                   font-weight: 600;
+                  font-size: 1rem;
                }
                span {
                   color: #7b7c88;
                   font-weight: 400;
+                  font-size: .8rem;
                }
            }
 
@@ -599,11 +604,12 @@ section  {
    background-color: rgb(205 205 205 / 0%);
    border-radius: 5px;
    border: 1px solid rgb(255 255 255 / 6%);
-   height: 365px;
+   height: 350px;
    display: flex;
    justify-content: center;
    align-items: center;
    padding: 0rem 1rem;
+   margin-top: -3.7rem;
 }
 .swiper-button-next::after:hover, .swiper-button-prev::after:hover {
    backdrop-filter: blur(16px) saturate(180%);
@@ -1021,7 +1027,7 @@ footer {
       background-color: rgb(205 205 205 / 0%);
       border-radius: 5px;
       border: 1px solid rgb(255 255 255 / 6%);
-      height: 25.25rem;
+      height: 21.875;
       display: flex;
       justify-content: center;
       align-items: center;
