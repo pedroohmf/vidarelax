@@ -1290,7 +1290,7 @@ footer {
    }
 
    .section3 {
-      display: none;
+      display: flex;
       justify-content: center;
       align-items: center;
 
@@ -1437,7 +1437,7 @@ footer {
    }
 
    .section3 {
-      display: none;
+      display: flex;
       justify-content: center;
       align-items: center;
 
