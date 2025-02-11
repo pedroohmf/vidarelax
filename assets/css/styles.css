@@ -841,10 +841,25 @@ footer {
 
       .area-depoimentos {
          width: auto;
+         display: flex;
+         justify-content: center;
+         align-items: center;
 
 
          h1 {
             font-size: var(--h2-font-size);
+         }
+
+         .slide {
+            max-width: 280px;
+
+            .area-depoimento{
+               width: 250px;
+            }
+
+            .swiper-slide {
+               margin-right: 0rem !important;
+           }
          }
       }
    }
