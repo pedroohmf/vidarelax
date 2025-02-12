@@ -850,16 +850,16 @@ footer {
          }
 
          .slide {
-            max-width: 962px;
+            max-width: 580px;;
 
             .area-depoimento{
-               width: 900px;
+               width: 280px;
             }
 
             .swiper-slide {
-               margin-right: 0rem !important;
-               margin-left: 1rem;
-           }
+               margin-right: 1rem;
+               margin-left: 0rem;
+            }
          }
       }
    }
@@ -1359,13 +1359,21 @@ footer {
          .slide {
             max-width: 335px;
 
+            .swipper-wrapper {
+               justify-content: end;
+               align-items: center;
+
+
+            }
+
             .area-depoimento{
+               margin-left: 0rem;
                width: 250px;
             }
 
             .swiper-slide {
                margin-right: 0rem !important;
-               margin-left: 0rem;
+               margin-left: 2.2rem;
             }
          }
       }
@@ -1529,9 +1537,14 @@ footer {
          .slide {
             max-width: 280px;
 
+            .swiper-wrapper {
+               justify-content: flex-start;
+               align-items: center;
+            }
+
             .area-depoimento{
-               padding: 0rem .1rem;
-               width: 225px;
+               margin-left: 1.5rem;
+               width: 235px;
 
                .depoimento {
                   p {
